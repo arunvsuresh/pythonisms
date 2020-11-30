@@ -26,7 +26,18 @@ def func_acting_as_variable(text=None):
     else:
         return var(text)
 
+
 # passing in functions to a list
 def func_in_data_structures(*args):
     lst = [arg for arg in args]
     return lst
+
+# demonstrate how python functions can capture local state
+def functions_capturing_local_state(a):
+    def add(b):
+        return a + b
+    return add
+
+def call_functions_capturing_local_state():
+    adder = functions_capturing_local_state(4)
+    return adder(5)
