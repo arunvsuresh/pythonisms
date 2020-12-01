@@ -42,7 +42,7 @@ def call_functions_capturing_local_state():
     adder = functions_capturing_local_state(4)
     return adder(5)
 
-
+# demonstrate how python objects can be called like functions
 class ObjectBehavesLikeFunction:
     def __init__(self, a):
         self.a = a
