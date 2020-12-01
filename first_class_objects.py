@@ -41,3 +41,20 @@ def functions_capturing_local_state(a):
 def call_functions_capturing_local_state():
     adder = functions_capturing_local_state(4)
     return adder(5)
+
+
+class ObjectBehavesLikeFunction:
+    def __init__(self, a):
+        self.a = a
+
+    def __call__(self, b):
+        return self.a + b
+
+
+def call_objects_behaving_like_functions():
+    add_to_4 = ObjectBehavesLikeFunction(4)
+    return add_to_4(33)
+
+
+
+
