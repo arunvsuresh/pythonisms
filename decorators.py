@@ -13,8 +13,8 @@ def hello():
     print('hello')
 
 
-# hello = my_decorator(hello)
-# hello()
+hello = my_decorator(hello)
+hello()
 
 # adding some syntactic sugar
 def syntactic_sugar_decorator(func):
@@ -32,7 +32,5 @@ def hi():
 
 @demonstrate_decorator_reusability
 def greeting(name):
-    print(f"greeting! {name}")
+    return f"greeting! {name}"
 
-
-greeting("world!")
