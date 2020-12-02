@@ -31,7 +31,8 @@ def hi():
 
 
 @demonstrate_decorator_reusability
-def greeting():
-    print("greeting!")
+def greeting(name):
+    print(f"greeting! {name}")
 
-greeting()
+
+greeting("world!")
