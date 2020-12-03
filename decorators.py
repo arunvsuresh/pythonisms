@@ -1,4 +1,5 @@
 from decorator_module import demonstrate_decorator_reusability
+from timer import timer_decorator
 
 # demonstrate underlying behavior of decorators
 def my_decorator(func):
@@ -34,3 +35,11 @@ def hi():
 def greeting(name):
     return f"greeting! {name}"
 
+
+@timer_decorator
+def operations(*args):
+    if len(args) == 1:
+        return sum([i for i in range(args[0])])
+
+
+print(operations(10000))
